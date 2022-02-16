@@ -58,6 +58,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height,
                       width: MediaQuery.of(context).size.width / 2,
+                      child: const CircleAvatar(
+                        radius: 50,
+                        child: Image(
+                          image: AssetImage("abc.png"),
+                        ),
+                      ),
                     ),
                   ),
                   Flexible(

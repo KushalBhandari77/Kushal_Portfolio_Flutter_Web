@@ -6,12 +6,9 @@ void main() => runApp(Hummingbird());
 class Hummingbird extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.black).copyWith(
-        colorScheme: ThemeData().colorScheme.copyWith(primary: Colors.black87),
-      ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

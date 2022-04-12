@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:kushal_portfolio/home_screen.dart';
 
-void main() => runApp(Hummingbird());
+void main() {
+  runApp(const KushalPortfolio());
+}
 
-class Hummingbird extends StatelessWidget {
+class KushalPortfolio extends StatelessWidget {
+  const KushalPortfolio({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(
+        buttonTheme: const ButtonThemeData(
+          buttonColor: Colors.white,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: const HomeScreen(),
     );
   }
 }

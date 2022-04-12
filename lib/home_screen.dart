@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:kushal_portfolio/lyrics_screen.dart';
 
 import 'nav_bar.dart';
 
@@ -28,6 +28,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   Color(0xFF0a183e),
                 ])),
           ),
+          actions: [
+            TextButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => (const LyricsScreen())));
+                },
+                child: Text(
+                  'Lyrics',
+                  style: TextStyle(color: Theme.of(context).buttonColor),
+                ))
+          ],
         ),
         drawer: const NavigationCustom(),
         body: Container(
@@ -53,45 +64,42 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Color(0xFF0a183e),
               ),
               child: Row(
-                children: [
-                  Flexible(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: const CircleAvatar(
-                        radius: 50,
-                        child: Image(
-                          image: AssetImage("abc.png"),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: SizedBox(
-                      height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: Center(
-                          child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Hello!  I'm",
-                            style: GoogleFonts.cinzelDecorative(
-                              fontSize: 35,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Text(
-                            "Flutter Developer",
-                            style: GoogleFonts.cinzelDecorative(
-                              fontSize: 35,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      )),
-                    ),
-                  )
+                children: const [
+                  // Flexible(
+                  //   child: SizedBox(
+                  //     height: MediaQuery.of(context).size.height,
+                  //     width: MediaQuery.of(context).size.width / 2,
+                  //     child: const Image(
+                  //       image: AssetImage("abc.png"),
+                  //     ),
+                  //   ),
+                  // ),
+                  // Flexible(
+                  //   child: SizedBox(
+                  //     height: MediaQuery.of(context).size.height,
+                  //     width: MediaQuery.of(context).size.width / 2,
+                  //     child: Center(
+                  //         child: Column(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: [
+                  //         Text(
+                  //           "Hello!  I'm",
+                  //           style: GoogleFonts.cinzelDecorative(
+                  //             fontSize: 35,
+                  //             color: Colors.white,
+                  //           ),
+                  //         ),
+                  //         Text(
+                  //           "Flutter Developer",
+                  //           style: GoogleFonts.cinzelDecorative(
+                  //             fontSize: 35,
+                  //             color: Colors.white,
+                  //           ),
+                  //         )
+                  //       ],
+                  //     )),
+                  //   ),
+                  // )
                 ],
               ),
             ),
